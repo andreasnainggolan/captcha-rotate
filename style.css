@@ -1,0 +1,61 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#box {
+    margin: 250px auto;
+    width: 20%;
+    height: auto;
+    padding: 20px 10px;
+    border: 1px solid rgb(43, 43, 43);
+}
+
+#content {
+    width: 100%;
+}
+
+.left {
+    width: 50%;
+    text-align: center;
+    float: left;
+}
+
+.right {
+    width: 50%;
+    text-align: center;
+    float: right;
+}
+
+.left img,
+.right img {
+    width: 120px;
+    height: 120px;
+}
+
+.submit {
+    color: white;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(16, 134, 16);
+}
+
+.right a:first-child {
+    float: left;
+}
+
+.right a:last-child {
+    float: right;
+}

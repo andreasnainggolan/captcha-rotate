@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="box">sdafsfasfadsfasf
+        <div id="header">
+            <p>Use the arrows to rotate the object to face in the direction of the hand.</p>
+        </div>
+        <div id="content">
+            <div class="left">
+                <img class="question" src="tap.png">
+            </div>
+            <div class="right">
+                <img class="answer" src="iron.png">
+                <div class="text">
+                    <a href="#" class="prev">Prev</a>
+                    <a href="#" class="next">Next</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <button class="submit" type="submit">Submit</button>
+        </div>
+    </div>
+</body>
+<script>
+    $(document).ready(function() {
+        var question = 320;
+        $(".question").css('transform', 'rotate(' + question + 'deg)');
+
+        var value = 0;
+        $(".prev").click(function() {
+            if (value === 0) {
+                value = 360;
+            }
+
+            value = value - 20;
+            $('.answer').css('transform', 'rotate(' + value + 'deg)');
+        })
+
+        $(".next").click(function() {
+            if (value === 360) {
+                value = 0;
+            }
+
+            value = value + 20;
+            $('.answer').css('transform', 'rotate(' + value + 'deg)');
+        })
+
+        $(".submit").click(function() {
+            if (question != value) {
+                alert("FAILED");
+            } else {
+                alert("SUCCESS");
+
+                setTimeout(function() {
+                    window.location.href = "dashboard.html";
+                }, 5)
+            }
+        })
+    })
+</script>
+
+</html>
